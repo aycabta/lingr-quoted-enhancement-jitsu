@@ -26,7 +26,7 @@
         var messages = $("div.decorated p");
         for (i = 0; i < messages.length; i++) {
             var oldMessage = messages[i].innerHTML;
-            messages[i].innerHTML = oldMessage.replace(/^((?:&gt;|＞).*?)$/g, '<span class="quoted">$1</span>');;
+            messages[i].innerHTML = oldMessage.replace(/^((?:&gt;|＞).*?)$/g, '<span class="quoted">$1</span>');
             console.log(messages[i].innerHTML);
         }
     }
