@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Lingr quoted enhancement jitsu
 // @namespace  http://aycabta.github.io/
-// @version    0.1.3
+// @version    0.1.4
 // @description  The Benry Script
 // @include    http://lingr.com/
 // @include    http://lingr.com/room/censored/archives*
@@ -10,13 +10,13 @@
 
 (function() {
     if (location.href == "http://lingr.com/") {
-        Lingr.Text.oldDecorate = Lingr.Text.decorate;
+        Lingr.Text.oldLingrQuotedEnhancementJitsuDecorate = Lingr.Text.decorate;
         Lingr.Text.decorate = function(str) {
             var newStr;
             if (!str) {
-                return Lingr.Text.oldDecorate(str);
+                return Lingr.Text.oldLingrQuotedEnhancementJitsuDecorate(str);
             }
-            newStr = Lingr.Text.oldDecorate(str);
+            newStr = Lingr.Text.oldLingrQuotedEnhancementJitsuDecorate(str);
             return newStr.split('\n').map(function(s) {
                 return s.replace(/(^|<p>)((?:&gt;|＞).*?)($|<\/p>)/g, '$1<span class="quoted">$2</span>$3');
             });
