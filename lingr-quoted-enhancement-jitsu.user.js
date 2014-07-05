@@ -18,7 +18,7 @@
             }
             newStr = Lingr.Text.oldLingrQuotedEnhancementJitsuDecorate(str);
             return newStr.split('\n').map(function(s) {
-                return s.replace(/(^|<p>)((?:&gt;|¡ä).*?)($|<\/p>)/g, '$1<span class="quoted">$2</span>$3');
+                return s.replace(/(^|<p>)((?:&gt;|\uff1e).*?)($|<\/p>)/g, '$1<span class="quoted">$2</span>$3');
             });
         };
     } else {
@@ -26,7 +26,7 @@
         var messages = $("div.decorated p");
         for (i = 0; i < messages.length; i++) {
             var message = messages[i];
-            message.innerHTML = message.innerHTML.replace(/^((?:&gt;|¡ä).*?)$/g, '<span class="quoted">$1</span>');
+            message.innerHTML = message.innerHTML.replace(/^((?:&gt;|\uff1e).*?)$/g, '<span class="quoted">$1</span>');
         }
     }
     var style = document.createElement('style');
