@@ -18,7 +18,7 @@
             var newStr = Lingr.Text.oldLingrQuotedEnhancementJitsuDecorate(str);
             return newStr.split('\n').map(function(s) {
                 return s.replace(/(^|<p>)((?:&gt;|\uff1e).*?)($|<\/p>)/g, '$1<span class="quoted">$2</span>$3');
-            });
+            }).join('\n');
         };
     } else {
         var messages = $("div.decorated p");
