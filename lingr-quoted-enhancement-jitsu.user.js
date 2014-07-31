@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       Lingr quoted enhancement jitsu
 // @namespace  http://aycabta.github.io/
-// @version    0.1.7
+// @version    0.1.8
 // @description  The Benry Script
 // @include    http://lingr.com/
 // @include    http://lingr.com/room/*/archives*
